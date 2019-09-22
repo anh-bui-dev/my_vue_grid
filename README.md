@@ -9,7 +9,7 @@ Setup:
     * Open new cmd and run: npm run serve
 
 Development:
-- React frontend: http://localhost:8081
+- Vue frontend: http://localhost:8081
 - Json server: http://localhost:4081
 
 Usage:  
