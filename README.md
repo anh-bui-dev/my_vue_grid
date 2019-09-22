@@ -1,4 +1,4 @@
-Simple searching to show grid by Vue  
+Simple searching to show the grid by Vue  
 &nbsp;  
 Setup:
 - Install npm
@@ -14,7 +14,7 @@ Development:
 
 Usage:  
 Assume requesting API will be half of second.  
-- Go to http://localhost:8081 to view the list of booking via the name of sellers.
+- Go to http://localhost:8081 to view the list of booking and group by the name of sellers.
 - Type the key word to search product name.
 - Automatically filter after typeing more than 3 characters.
 - Press enter to filter,
