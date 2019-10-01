@@ -1,5 +1,5 @@
 <template>
-    <transation>
+    <span>
         <ag-grid-vue class="grid ag-theme-blue"
                     @grid-ready = "onGridReady"
                     :columnDefs = "columnDefs"
@@ -16,7 +16,7 @@
         </ag-grid-vue>
         <Popup ref="popup" message="Show the detail of booking" :detail="detail" />
         <Error v-if="error && error.message" :message="error.message" />
-    </transation>
+    </span>
 </template>
 
 <script>

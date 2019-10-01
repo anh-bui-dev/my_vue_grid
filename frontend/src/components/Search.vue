@@ -3,7 +3,7 @@
         <div class="search">
             <input @keyup.enter="handleEnter" class="form-control" @change="handleChange" type="text" placeHolder="Search for booking by product name" />
             <br/>
-            <div class="content" v-for="seller in sellers" :key="seller">
+            <div class="content" v-for="(seller, index) in sellers" :key="`${keyWord}-${index}`">
                 <p>{{ seller.name }}</p>
                 <Bookings :seller="seller" />
             </div>
@@ -63,7 +63,7 @@ export default {
                     var products = resp1.data.filter(x => (x.sellerId == seller.id) && (x.name.toUpperCase().includes(this.keyWord.toUpperCase())));
                     return {...seller, products: products};
                 })
-                this.sellers = sellers;
+                this.sellers = sellers.sort((a, b) => a.name.localeCompare(b.name));
                 // Hide loading
                 this.$refs.loading.handleLoading();
             })
